@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./wackr.css" rel="stylesheet">
+
+  <!-- Page starts here -->
+  <title>Payment Portal</title>  
+</head>
+
+<body>
+
+<!-- Wackr Logo and text header -->
+<header>
+  <div class="wackrheader">
+	<div class="logo-header">
+		<a href="./home.html"><image src="assets/wackrlogo.png" width="50" height="50" alt="WackrLogo"></a>
+	</div>
+	<div class="text-header">
+		<h1>Wackr</h1>
+	</div>
+  </div>
+  <nav>
+	<ul class="navigation">
+		<li><a href="./home.html">Home</a></li>
+		<li><a href="./about.html">About</a></li>
+		<li><a href="./solutions.html">Solutions</a></li>
+		<li><a href="./signin.html">Sign In</a></li>
+	</ul>
+  </nav>
+</header>
+<div class="content">
+	<div class="obj-center">
+		<h2>Payment Portal</h1> <!-- Something to break up white space on sides of screen -->
+				<div>
+					<p class="signup-splash"></p>
+					<form id="payportal" class="payportal">
+						<b>
+						<label for="invnum">Invoice Number</label><br>
+						<input type="number" id="invnum" name="invnum" placeholder="103346" required>
+						<label for="acctnum">Account Number</label><br>
+						<input type="number" id="acctnum" name="acctnum" placeholder="103346" required><br>
+						<label for="total">Total</label><br>
+						<input type="number" id="total" name="total" placeholder="72.50" required><br>
+						<label for="tax">Tax</label><br>
+						<input type="number" id="tax" name="tax" placeholder="10.75" required><br>
+						<label for="paymethod">Payment Method</label><br>
+						<input type="text" id="paymethod" name="paymethod" placeholder="Credit Card" required><br>
+						<label for="billaddress">Billing Address</label><br>
+						<input type="text" id="billaddress" name="billaddress" placeholder="4223 F Avenue NE" required><br>
+						<label for="city">City</label><br>
+						<input type="text" id="city" name="city" placeholder="Cedar Rapids" required><br>
+						<label for="state">State</label><br>
+						<input type="text" id="state" name="state" placeholder="IA" required><br>
+						<label for="zipcode">ZIP</label><br>
+						<input type="number" id="zipcode" name="zipcode" placeholder="52402" required><br>
+						<label for="tip">Tip</label><br>
+						<input type="number" id="tip" name="tip" placeholder="5.00" required><br>
+						<label for="finalcost">Final Cost</label><br>
+						<input type="number" id="finalcost" name="finalcost" placeholder="85.00" required><br>
+						<label for="paydate">Date of Payment</label><br>
+						<input type="date" id="paydate" name="paydate" required><br>
+						<textarea class="textarea" id="paynotes" name="paynotes" placeholder="Payment Notes"></textarea><br>
+						<label for="signature">Payment Received by:</label><br>
+						<input type="text" id="signature" name="signature"><br>
+						<input class="dash-buttons" type="submit" value="Cancel"><input class="dash-buttons" type="submit" value="Send Invoice">
+						<br>
+						</b>
+					</form>
+				</div>
+	</div>
+</div>
+
+</body>
+	<!-- Page ends here -->
+	
+<footer class="site-footer">
+	<p>Produced by Sentre Solutions</p>
+</footer>
+
+</html>

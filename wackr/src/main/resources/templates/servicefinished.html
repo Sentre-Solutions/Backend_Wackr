@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./wackr.css" rel="stylesheet">
+
+  <!-- Page starts here -->
+  <title>Service Finished</title>  
+</head>
+
+<body>
+
+<!-- Wackr Logo and text header -->
+<header>
+  <div class="wackrheader">
+	<div class="logo-header">
+		<a href="./home.html"><image src="assets/wackrlogo.png" width="50" height="50" alt="WackrLogo"></a>
+	</div>
+	<div class="text-header">
+		<h1>Wackr</h1>
+	</div>
+  </div>
+  <nav>
+	<ul class="navigation">
+		<li><a href="./home.html">Home</a></li>
+		<li><a href="./about.html">About</a></li>
+		<li><a href="./solutions.html">Solutions</a></li>
+		<li><a href="./signin.html">Sign In</a></li>
+	</ul>
+  </nav>
+</header>
+<div class="content">
+	<div class="obj-center">
+		<h2>Add Service</h1> <!-- Something to break up white space on sides of screen -->
+			<div>
+				<p class="signup-splash"></p>
+					<form id="servicefinished" class="servicefinished">
+						<b>
+						<label for="servicename">Service Name</label><br>
+						<input type="text" id="servicename" name="servicename" placeholder="Trimmed bushes" required><br>
+						<label for="multiplier">Multiplier</label><br>
+						<input type="number" id="multiplier" name="multiplier" placeholder="4" required><br>
+						<label for="customername">Customer Name</label><br>
+						<input type="text" id="customername" name="customername" placeholder="John Doe" required><br>
+						<label for="address">Customer Address</label><br>
+						<input type="text" id="address" name="address" placeholder="123 Main St" required><br>
+						<label for="city">City</label><br>
+						<input type="text" id="city" name="city" placeholder="Des Moines" required><br>
+						<label for="state">State</label><br>
+						<input type="text" id="state" name="state" placeholder="IA" required><br>
+						<label for="zipcode">ZIP</label><br>
+						<input type="number" id="zipcode" name="zipcode" placeholder="50303" required><br>
+						<label for="addserviceestimate">Added Service Estimate</label><br>
+						<input type="number" id="zipcode" name="zipcode" placeholder="50303" required><br>
+						<label for="actserviceestimate">Actual Service Estimate</label><br>
+						<input type="number" id="actserviceestimate" name="actserviceestimate" placeholder="85.00" required><br>
+						<label for="startdate">Scheduled Start Date of Service</label><br>
+						<input class="date" type="date" id="startdate" name="startdate" placeholder="04/27/2021" required><br>
+						<label for="jobnotes">Job Notes</label><br>
+						<textarea class="textarea" id="jobnotes" name="jobnotes" placeholder="Notes"></textarea><br>
+						<label for="signature">Job Manager Signature</label><br>
+						<input type="text" id="signature" name="signature"><br>
+						<input class="dash-buttons" type="submit" value="Cancel"><input class="dash-buttons" type="submit" value="Send Invoice">
+						<br>
+						</b>
+					</form>
+				</div>
+	</div>
+</div>
+
+</body>
+	<!-- Page ends here -->
+	
+<footer class="site-footer">
+	<p>Produced by Sentre Solutions</p>
+</footer>
+
+</html>
