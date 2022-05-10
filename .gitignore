@@ -1,1 +1,2 @@
 workspace/wackr/Tomcat/logs/*
+wackr/src/main/resources/application.properties

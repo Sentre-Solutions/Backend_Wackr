@@ -2,6 +2,7 @@ package com.dev.wackr.Config;
  
 import com.dev.wackr.Tables.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
  
@@ -19,8 +20,18 @@ public class WackrUserDetails implements UserDetails {
  
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        SimpleGrantedAuthority authority = new SimpleGrantedAuthority(user.getRole());
-        return Arrays.asList(authority);
+        ArrayList<SimpleGrantedAuthority> authorities = new ArrayList<>();
+        switch(user.getRole()){
+            case "Admin":
+                authorities.add(new SimpleGrantedAuthority("Admin"));
+            case "User":
+                authorities.add(new SimpleGrantedAuthority("User"));
+            break;
+
+        }
+        //SimpleGrantedAuthority authority = new SimpleGrantedAuthority(user.getRole());
+
+        return authorities;
     }
  
     @Override
