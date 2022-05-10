@@ -20,9 +20,9 @@ public class User {
      * Unique User Id
      */
     @Id
-    @Column(name = "UUID")
+    @Column(name = "UserID")
 	@GeneratedValue(strategy=GenerationType.AUTO)
-    private long UUID;
+    private long UserID;
 
     @Column(name = "EMAIL")
     private String email;
@@ -39,28 +39,18 @@ public class User {
     @Column(name = "LOGIN_ATTEMPTS")
     private int loginAttempts;
 
-    @Column(name = "ACTIVE")
-    private boolean active;
-
     @Column(name = "CREATED_ON")
     private LocalDate createdOn;
 
-    @ManyToMany(cascade = { CascadeType.ALL })
-    @JoinTable(
-        name = "User_Company", 
-        joinColumns = { @JoinColumn(name = "UUID") }, 
-        inverseJoinColumns = { @JoinColumn(name = "UCID") }
-    )
-    private List<Company> employers;
 
     /*-----------------------------------   Getters and Setters --------------------------*/
 
     public long getUUID(){
-        return UUID;
+        return UserID;
     }
 
     public void setUUID(long UUID){
-        this.UUID = UUID;
+        this.UserID = UUID;
     }
 
     public String getEmail(){
@@ -95,13 +85,6 @@ public class User {
         this.loginAttempts = loginAttempts;
     }
 
-    public boolean getIsActive(){
-        return active;
-    }
-
-    public void setIsActive(boolean active){
-        this.active = active;
-    }
 
     public LocalDate getCreatedOn(){
         return createdOn;
@@ -110,11 +93,11 @@ public class User {
     public void setCreatedOn(LocalDate createdOn){
         this.createdOn = createdOn;
     }
-
+    
     public String getRole(){
         return role;
     }
-
+    
     public void setRole(String role){
         this.role = role;
     }

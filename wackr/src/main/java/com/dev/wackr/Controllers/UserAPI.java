@@ -76,6 +76,15 @@ public class UserAPI {
 
         return resp.get();
     }
+    
+    @GetMapping("/get/User")
+    public @ResponseBody User findUserByEmail(@RequestBody User User){
+
+       User resp = userRep.getUserByEmail(User.getEmail()); 	
+
+        return resp;		
+    
+    }
 
       // -----------   Exception handlers, Spring boot will call these if any of the above methods return an exception specified in the "ExceptionHandler" annotation
 

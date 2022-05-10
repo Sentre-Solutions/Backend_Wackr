@@ -23,7 +23,7 @@ public class Company {
     @Id
     @Column(name = "UCID")
 	@GeneratedValue(strategy=GenerationType.AUTO)
-    private long UCID;
+    private long UniqueCompanyID;
 
     @Column(name = "COMPANY_NAME")
     private String companyName;
