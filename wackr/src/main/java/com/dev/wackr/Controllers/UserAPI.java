@@ -47,6 +47,7 @@ public class UserAPI {
             throw new SecurityException("Could not create user.");
         }
         userRep.save(user);
+        return user;
     }
 
     // Mapping for main site add user request
