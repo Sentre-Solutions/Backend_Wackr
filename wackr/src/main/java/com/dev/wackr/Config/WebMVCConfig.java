@@ -83,7 +83,7 @@ protected void configure(final HttpSecurity http) throws Exception {
         .and()
             .antMatcher("/*")
             .authorizeRequests()
-            .anyRequest().authenticated()
+            // .anyRequest().authenticated()
         .and()
 			.logout()
 			.permitAll()

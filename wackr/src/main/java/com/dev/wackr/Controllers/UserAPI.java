@@ -38,11 +38,8 @@ public class UserAPI {
     @Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    @PostMapping(
-        path = "/new",
-        consumes = "*/*")
-    public ModelAndView addUser ( User user ){
 
+    public User doLogin(User user){
         user.setPassword( bCryptPasswordEncoder.encode(user.getPassword()));
         user.setRole("User");
 
@@ -50,7 +47,26 @@ public class UserAPI {
             throw new SecurityException("Could not create user.");
         }
         userRep.save(user);
+    }
+
+    // Mapping for main site add user request
+    @PostMapping(
+        path = "/new",
+        consumes = "*/*")
+    public ModelAndView addUser ( User user ){
+
+        doLogin(user);
         return new ModelAndView("redirect:/index.html");  
+
+    }
+
+    // This is the mapping mobile add user request
+    @PostMapping(path = "/add")
+    public @ResponseBody User addAPIUser ( @RequestBody User user ){
+
+        doLogin(user);
+        return user; 
+
     }
 
 
