@@ -121,21 +121,38 @@ public class User {
     
     public void UpdateUser(User UpdatedUser) {
     	
-    	//Everything but password and UUID
-//    
-//    	if(UpdatedUser.getName() != null) {
-//    		this.name = UpdatedUser.getName();
-//    	}
-//    	if(UpdatedUser.getEmail() != null) {
-//    		this.name = UpdatedUser.getEmail();
-//    	}if(UpdatedUser.getEmail() != null) {
-//    		this.name = UpdatedUser.getEmail();
-//    	}
-//    	if(UpdatedUser.getPermissions() != null) {
-//    		this.name = UpdatedUser.getEmail();
-//    	}
-//    	hasdf
-//    	
+    	//Everything but password, UUID
+
+   	if(UpdatedUser.getName() != null) {
+   		
+  		this.name = UpdatedUser.getName();
+  	}
+   	
+   	if(UpdatedUser.getEmail() != null) {
+   		
+   		this.email = UpdatedUser.getEmail();
+   	}
+   	
+   	if((Long)UpdatedUser.getPermissions() != null) {
+   		
+   		this.permissions = UpdatedUser.getPermissions();
+   	}
+   	
+   	if(UpdatedUser.getRole() != null) {
+   		
+   		this.role = UpdatedUser.role;
+   	}
+   	
+   	if((Integer)UpdatedUser.getLoginAttempts() != null) {
+   		
+   		this.loginAttempts = UpdatedUser.getLoginAttempts();
+   	}
+   	
+   	if(UpdatedUser.getCreatedOn() != null) {
+   		
+   		this.createdOn = UpdatedUser.getCreatedOn();
+   	}
+   
     	
     	
     }
