@@ -1,3 +1,6 @@
+//UserTables.java
+
+
 package com.dev.wackr.Tables;
 
 import javax.persistence.*;
@@ -29,6 +32,10 @@ public class User {
 
     @Column(name = "ROLE")
     private String role;
+    
+    @Column(name = "PERMISSIONS")
+    private long permissions;
+    
 
     @Column(name = "PASSWORD")
     private String password;
@@ -41,6 +48,8 @@ public class User {
 
     @Column(name = "CREATED_ON")
     private LocalDate createdOn;
+    
+    
 
 
     /*-----------------------------------   Getters and Setters --------------------------*/
@@ -101,4 +110,34 @@ public class User {
     public void setRole(String role){
         this.role = role;
     }
+    
+    public void setPermissions(long permissions){ 
+    	this.permissions = permissions;
+    }
+    
+    public long getPermissions() {
+    	return this.permissions;
+    }
+    
+    public void UpdateUser(User UpdatedUser) {
+    	
+    	//Everything but password and UUID
+//    
+//    	if(UpdatedUser.getName() != null) {
+//    		this.name = UpdatedUser.getName();
+//    	}
+//    	if(UpdatedUser.getEmail() != null) {
+//    		this.name = UpdatedUser.getEmail();
+//    	}if(UpdatedUser.getEmail() != null) {
+//    		this.name = UpdatedUser.getEmail();
+//    	}
+//    	if(UpdatedUser.getPermissions() != null) {
+//    		this.name = UpdatedUser.getEmail();
+//    	}
+//    	
+//    	
+    	
+    	
+    }
+    
 }

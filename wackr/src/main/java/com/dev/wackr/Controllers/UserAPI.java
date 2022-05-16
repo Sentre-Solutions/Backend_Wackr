@@ -94,13 +94,32 @@ public class UserAPI {
         return resp.get();
     }
     
-    @GetMapping("/get/User")
+    @GetMapping("/GetByEmail")
     public @ResponseBody User findUserByEmail(@RequestBody User User){
 
        User resp = userRep.getUserByEmail(User.getEmail()); 	
 
         return resp;		
     
+    }
+    
+    @PostMapping("/Update")
+    public @ResponseBody  User UpdateUser(@RequestBody User UpdatedUser) {
+    	
+    	  Optional<User> resp = userRep.findById(UpdatedUser.getUUID());
+    	  
+    	   if (!resp.isPresent()){
+    		   
+               throw new SecurityException("User not found!");
+           }
+    	   
+    	   User Myresp = resp.get();
+    	   
+    	   Myresp.UpdateUser(UpdatedUser);
+    	   
+    	   userRep.save(Myresp);
+   
+    	return  Myresp;
     }
 
       // -----------   Exception handlers, Spring boot will call these if any of the above methods return an exception specified in the "ExceptionHandler" annotation
