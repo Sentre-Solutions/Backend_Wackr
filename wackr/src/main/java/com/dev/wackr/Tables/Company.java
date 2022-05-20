@@ -28,9 +28,7 @@ public class Company {
     @Column(name = "COMPANY_NAME")
     private String companyName;
     
-    @ManyToMany(mappedBy = "employers")
-    private Set<User> employees;
-
+  
     @Column(name = "CREATED_ON")
     private LocalDate createdOn;
 

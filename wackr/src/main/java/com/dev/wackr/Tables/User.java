@@ -25,17 +25,17 @@ public class User {
     @Id
     @Column(name = "UserID")
 	@GeneratedValue(strategy=GenerationType.AUTO)
-    private long UserID;
+    private Long UserID;
 
     @Column(name = "EMAIL")
     private String email;
 
-    @Column(name = "ROLE")
+    @Column(name = "ROLE", nullable = true)
     private String role;
     
-    @Column(name = "PERMISSIONS")
-    private long permissions;
-    
+    @Column(name = "PERMISSIONS", nullable = true)
+    private int permissions;
+  
 
     @Column(name = "PASSWORD")
     private String password;
@@ -43,7 +43,7 @@ public class User {
     @Column(name = "NAME")
     private String name;
 
-    @Column(name = "LOGIN_ATTEMPTS")
+    @Column(name = "LOGIN_ATTEMPTS", nullable = true)
     private int loginAttempts;
 
     @Column(name = "CREATED_ON")
@@ -111,11 +111,11 @@ public class User {
         this.role = role;
     }
     
-    public void setPermissions(long permissions){ 
+    public void setPermissions(int permissions){ 
     	this.permissions = permissions;
     }
     
-    public long getPermissions() {
+    public int getPermissions() {
     	return this.permissions;
     }
     
@@ -133,7 +133,7 @@ public class User {
    		this.email = UpdatedUser.getEmail();
    	}
    	
-   	if((Long)UpdatedUser.getPermissions() != null) {
+   	if(UpdatedUser.getPermissions() != 0) {
    		
    		this.permissions = UpdatedUser.getPermissions();
    	}
@@ -143,11 +143,7 @@ public class User {
    		this.role = UpdatedUser.role;
    	}
    	
-   	if((Integer)UpdatedUser.getLoginAttempts() != null) {
-   		
-   		this.loginAttempts = UpdatedUser.getLoginAttempts();
-   	}
-   	
+   
    	if(UpdatedUser.getCreatedOn() != null) {
    		
    		this.createdOn = UpdatedUser.getCreatedOn();
