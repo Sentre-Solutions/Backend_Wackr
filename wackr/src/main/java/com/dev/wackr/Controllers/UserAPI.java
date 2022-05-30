@@ -121,7 +121,25 @@ public class UserAPI {
    
     	return  Myresp;
     }
-
+    
+    @PostMapping("/AddTask/{uniqueUserId}")
+    public @ResponseBody  User AddTask(@RequestBody Task MyTask, @PathVariable long uniqueUserId) {
+    	
+    	  Optional<User> resp = userRep.findById(uniqueUserId);
+    	  
+    	   if (!resp.isPresent()){
+    		   
+               throw new SecurityException("User not found!");
+           }
+    	   
+    	   User Myresp = resp.get();
+    	   
+    	   Myresp.Tasks.add(MyTask);
+    	   
+    	   userRep.save(Myresp);
+   
+    	return  Myresp;
+    }
       // -----------   Exception handlers, Spring boot will call these if any of the above methods return an exception specified in the "ExceptionHandler" annotation
 
       @ExceptionHandler(SecurityException.class)

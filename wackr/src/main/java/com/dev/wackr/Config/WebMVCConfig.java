@@ -63,7 +63,7 @@ protected void configure(final HttpSecurity http) throws Exception {
         .and()
             .authorizeRequests()
             .antMatchers("/**/wackr/api/**/new")
-            .permitAll()
+            .permitAll() 
         .and()
             .authorizeRequests()
             .antMatchers("/*orgorcust.html")

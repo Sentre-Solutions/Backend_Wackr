@@ -49,7 +49,11 @@ public class User {
     @Column(name = "CREATED_ON")
     private LocalDate createdOn;
     
-    
+    @ManyToMany
+    @JoinTable( name = "USERS_ON_TASKS" , 
+    	joinColumns = @JoinColumn(name = "UserID"), 
+    	inverseJoinColumns = @JoinColumn(name = "UniqueTaskID"))
+    public Set<Task> Tasks; 
 
 
     /*-----------------------------------   Getters and Setters --------------------------*/
@@ -152,5 +156,7 @@ public class User {
     	
     	
     }
+    
+   
     
 }
