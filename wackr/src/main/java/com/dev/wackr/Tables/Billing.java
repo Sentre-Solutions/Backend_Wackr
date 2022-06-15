@@ -4,58 +4,57 @@ import java.time.LocalDate;
 
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 
 @Entity
-public class Task {
+public class Billing {
 	
-	   public Task(){
+	   public Billing(){
 	        this.createdOn = LocalDate.now();
 	    }
 
 	    /**
-	     * Unique Company Id
+	     * Unique Bill Id
 	     */
 	    @Id
-	    @Column(name = "TASK_ID")
+	    @Column(name = "Billing")
 		@GeneratedValue(strategy=GenerationType.AUTO)  //Some are public for easier debugging REMEMBER TO CHANGE TO A BETTER SYSTEM!!
-		public long UniqueTaskID;
+		public long uniqueBillingID;
 
-	    @Column(name = "TASK_NAME")
-		public String taskName;
 	    
 	  
-	    @Column(name = "CREATED_ON")
+	    @Column(name = "TRANSACTION_DATE")
 	    private LocalDate createdOn;
 	    
-	    @Column(name = "DUE_DATE")
-	    private LocalDate dueDate;
-	    
-	    @Column(name = "TASK_DESCRIPTION")
-		public String TaskDescription;
-	    
-	    @ManyToMany(mappedBy = "Tasks")
-	    private Set<User> UserOnJob;
-	    
-	    @OneToOne(cascade = CascadeType.ALL)
-	    @JoinColumn (name = "BillingId")
-	    private Billing Bill;
+	    @Column(name = "AMOUNT")
+	    private float amount;
 	    
 	    
 	    
+	    
+	    @OneToOne 
+	    private Task taskAccomplished;
+	    
+	     
+	    @ManyToOne
+	    @JoinColumn (name = "CompanyId")
+	    private  Company company;
 	    
 	    
 	    
 	    
 	    
+	    
+
 
 }

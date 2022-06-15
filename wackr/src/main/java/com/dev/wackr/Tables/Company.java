@@ -31,5 +31,9 @@ public class Company {
   
     @Column(name = "CREATED_ON")
     private LocalDate createdOn;
+    
+    @OneToMany(cascade = CascadeType.ALL)
+    private  Set<Billing> Bills;
+    
 
 }

@@ -47,9 +47,6 @@ public class TaskAPI {
     @PostMapping("/add")
     public @ResponseBody Task addCompany(@RequestBody Task task){
 
-    	System.out.println("TASK NAME: "+task.taskName);
-    	System.out.println("TASK ID: "+ task.UniqueTaskID);
-    	System.out.println("TASK Description: "+ task.TaskDescription);
     	
         taskRepo.save(task);
 
