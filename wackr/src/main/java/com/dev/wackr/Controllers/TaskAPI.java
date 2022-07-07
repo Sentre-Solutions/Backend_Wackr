@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.dev.wackr.Repos.CompanyRepo;
 import com.dev.wackr.Repos.TaskRepo;
 import com.dev.wackr.Repos.UserRepo;
-import com.dev.wackr.Tables.Company;
+import com.dev.wackr.Tables.LSRTable;
 import com.dev.wackr.Tables.Task;
 import com.dev.wackr.Tables.User;
 
@@ -39,13 +39,13 @@ public class TaskAPI {
 
 
     @GetMapping("/get")
-    public @ResponseBody Iterable<Task> findAllCompanies(){
+    public @ResponseBody Iterable<Task> findAllTasks(){
         return taskRepo.findAll();
     }
 
 
     @PostMapping("/add")
-    public @ResponseBody Task addCompany(@RequestBody Task task){
+    public @ResponseBody Task addTask(@RequestBody Task task){
 
     	
         taskRepo.save(task);
@@ -54,18 +54,18 @@ public class TaskAPI {
     }
 
     @DeleteMapping("/delete")
-    public @ResponseBody List<Task> deleteCompany(@RequestParam long uid){
+    public @ResponseBody List<Task> deleteTask(@RequestParam long uid){
         taskRepo.deleteById(uid);
         return taskRepo.findAll();
     }     
     
     @GetMapping("/get/{taskID}")
-    public @ResponseBody Task findCompanyById(@PathVariable long taskID){
+    public @ResponseBody Task findTaskById(@PathVariable long taskID){
 
         Optional<Task> resp = taskRepo.findById(taskID);
 
         if (!resp.isPresent()){
-            throw new SecurityException("Company not found!");
+            throw new SecurityException("Task not found!");
         }
 
         return resp.get();

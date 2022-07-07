@@ -19,7 +19,7 @@ import com.dev.wackr.Repos.CompanyRepo;
 import com.dev.wackr.Repos.TaskRepo;
 import com.dev.wackr.Repos.UserRepo;
 import com.dev.wackr.Tables.Billing;
-import com.dev.wackr.Tables.Company;
+import com.dev.wackr.Tables.LSRTable;
 import com.dev.wackr.Tables.Task;
 
 

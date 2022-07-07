@@ -10,10 +10,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Formula;
 
 @Entity
-public class Company {
+public class LSRTable {
 
 
-    public Company(){
+    public LSRTable(){
         this.createdOn = LocalDate.now();
     }
 

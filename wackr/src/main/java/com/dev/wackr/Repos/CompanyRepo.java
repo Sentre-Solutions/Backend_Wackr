@@ -7,7 +7,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CompanyRepo extends JpaRepository<Company, Long>{
+public interface CompanyRepo extends JpaRepository<LSRTable, Long>{
     
 
 }

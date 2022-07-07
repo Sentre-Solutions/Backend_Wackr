@@ -48,7 +48,7 @@ public class Billing {
 	     
 	    @ManyToOne
 	    @JoinColumn (name = "CompanyId")
-	    private  Company company;
+	    private  LSRTable company;
 	    
 	    
 	    

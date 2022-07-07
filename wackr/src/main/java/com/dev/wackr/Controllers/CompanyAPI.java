@@ -29,13 +29,13 @@ public class CompanyAPI {
 
 
     @GetMapping("/get")
-    public @ResponseBody Iterable<Company> findAllCompanies(){
+    public @ResponseBody Iterable<LSRTable> findAllCompanies(){
         return comRepo.findAll();
     }
 
 
     @PostMapping("/add/")
-    public @ResponseBody Iterable<Company> addCompany(@RequestBody Company company){
+    public @ResponseBody Iterable<LSRTable> addCompany(@RequestBody LSRTable company){
 
 
         comRepo.save(company);
@@ -44,15 +44,15 @@ public class CompanyAPI {
     }
 
     @DeleteMapping("/delete")
-    public @ResponseBody List<Company> deleteCompany(@RequestParam long uid){
+    public @ResponseBody List<LSRTable> deleteCompany(@RequestParam long uid){
         comRepo.deleteById(uid);
         return comRepo.findAll();
     }     
     
     @GetMapping("/get/{uniqueUserId}")
-    public @ResponseBody Company findCompanyById(@PathVariable long uniqueUserId){
+    public @ResponseBody LSRTable findCompanyById(@PathVariable long uniqueUserId){
 
-        Optional<Company> resp = comRepo.findById(uniqueUserId);
+        Optional<LSRTable> resp = comRepo.findById(uniqueUserId);
 
         if (!resp.isPresent()){
             throw new SecurityException("Company not found!");
