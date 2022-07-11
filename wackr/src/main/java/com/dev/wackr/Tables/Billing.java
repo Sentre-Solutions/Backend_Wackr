@@ -28,8 +28,8 @@ public class Billing {
 	     */
 	    @Id
 	    @Column(name = "Billing")
-		@GeneratedValue(strategy=GenerationType.AUTO)  //Some are public for easier debugging REMEMBER TO CHANGE TO A BETTER SYSTEM!!
-		public long uniqueBillingID;
+		@GeneratedValue(strategy=GenerationType.AUTO)  
+		private long uniqueBillingID;
 
 	    
 	  
@@ -46,12 +46,43 @@ public class Billing {
 	    private Task taskAccomplished;
 	    
 	     
-	    @ManyToOne
-	    @JoinColumn (name = "CompanyId")
-	    private  LSRTable company;
+	
 	    
 	    
+	    /*-----------------------------------   Getters and Setters --------------------------*/
+
+	    public long getUniqueBillingID(){
+	        return uniqueBillingID;
+	    }
+
+	    public void setUUID(long uniqueBillingID){
+	        this.uniqueBillingID = uniqueBillingID;
+	    }
 	    
+	    public LocalDate getCreatedOn() {
+	    	return createdOn;
+	    }
+	    
+	    public void setCreatedOn(LocalDate createdOn ) {
+	    	this.createdOn = createdOn;
+	    }
+	    
+	    public float getAmount() {
+	    	return amount;
+	    }
+	    
+	    public void setAmount (float amount) {
+	    	this.amount = amount;
+	    }
+	    
+	    public Task getTaskAccomplished() {
+	    	return taskAccomplished;
+	    }
+	    
+	    public void setTaskAccomplished(Task taskAccomplished) {
+	    	this.taskAccomplished = taskAccomplished;
+	    }
+	 
 	    
 	    
 	    

@@ -32,8 +32,6 @@ public class UserAPI {
     @Autowired
     private UserRepo userRep;
 
-    @Autowired
-    public CompanyRepo comRepo;
 
     @Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;

@@ -123,6 +123,14 @@ public class User {
     	return this.permissions;
     }
     
+    public void setTasks(Set<Task> Tasks) {
+    	this.Tasks = Tasks;
+    }
+    
+    public Set<Task> getTasks() {
+    	return Tasks;
+    }
+    
     public void UpdateUser(User UpdatedUser) {
     	
     	//Everything but password, UUID

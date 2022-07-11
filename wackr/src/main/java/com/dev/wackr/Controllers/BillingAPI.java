@@ -15,11 +15,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dev.wackr.Repos.BillingRepo;
-import com.dev.wackr.Repos.CompanyRepo;
 import com.dev.wackr.Repos.TaskRepo;
 import com.dev.wackr.Repos.UserRepo;
 import com.dev.wackr.Tables.Billing;
-import com.dev.wackr.Tables.LSRTable;
 import com.dev.wackr.Tables.Task;
 
 
@@ -35,13 +33,13 @@ public class BillingAPI {
 	    
 	    
 	    @GetMapping("/get")
-	    public @ResponseBody Iterable<Billing> findAllCompanies(){
+	    public @ResponseBody Iterable<Billing> findAllBills(){
 	        return billingRepo.findAll();
 	    }
 
 
 	    @PostMapping("/add")
-	    public @ResponseBody Billing addCompany(@RequestBody Billing Bill){
+	    public @ResponseBody Billing addBilling(@RequestBody Billing Bill){
 
 	    	
 	    	billingRepo.save(Bill);
@@ -50,13 +48,13 @@ public class BillingAPI {
 	    }
 
 	    @DeleteMapping("/delete")
-	    public @ResponseBody List<Billing> deleteCompany(@RequestParam long uid){
+	    public @ResponseBody List<Billing> deleteBilling(@RequestParam long uid){
 	    	billingRepo.deleteById(uid);
 	        return billingRepo.findAll();
 	    }     
 	    
 	    @GetMapping("/get/{BillingId}")
-	    public @ResponseBody Billing findCompanyById(@PathVariable long BillingId){
+	    public @ResponseBody Billing findBillingById(@PathVariable long BillingId){
 
 	        Optional<Billing> resp = billingRepo.findById(BillingId);
 

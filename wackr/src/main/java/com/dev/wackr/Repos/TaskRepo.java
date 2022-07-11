@@ -2,7 +2,6 @@ package com.dev.wackr.Repos;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.dev.wackr.Tables.LSRTable;
 
 import com.dev.wackr.Tables.*;
 
