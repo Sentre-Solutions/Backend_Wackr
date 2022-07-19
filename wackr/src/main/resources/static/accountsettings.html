@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./wackr.css" rel="stylesheet">
+
+  <!-- Page starts here -->
+  <title>Account Settings</title>
+</head>
+
+<body>
+
+<!-- Wackr Logo and text header -->
+<header>
+  <div class="wackrheader">
+	<div class="logo-header">
+		<a href="./home.html"><image src="assets/wackrlogo.png" width="50" height="50" alt="WackrLogo"></a>
+	</div>
+	<div class="text-header">
+		<h1>Wackr</h1>
+	</div>
+  </div>
+ 
+  <nav>
+	<ul class="navigation">
+		<li><a href="#">Company</a></li>
+		<li><a href="#">Quoting</a></li>
+		<li><a href="#">Billing</a></li>
+		<li><a href="#">Customers</a></li>
+		<li><a href="#">Job Tracking</a></li>
+		<li>
+		<div class="dropdown">
+			<a href="#" class="dropbtn">Settings</a>
+				<div class="dropdown-content">
+					<a href="#">User Administration</a>
+					<a href="#">Manage Wackr Subscription</a>
+					<a href="accountsettings.html">Account Information</a>
+				</div>
+		</div>
+		</li>
+	</ul>
+  </nav>
+</header>
+<div class="content">
+	<!--Content goes here-->
+	<h3 class="obj-center">Account Settings</h3>
+		
+		<div class="settings row">
+					<div class="settings column">
+						<img src="./assets/default-profile.jpeg" width="250" height="250" alt="profile"><br><br>
+						<button class="dash-buttons">Change Picture</button>
+					</div>
+					<div class="settings column">
+						<label>Username</label><input type="text">
+						<label>Company Name</label><input type="text">
+						<label>Company Email</label><input type="text">
+						<label>Company Phone</label><input type="tel">
+						<button class="dash-buttons">Change Email</button>
+						<button class="dash-buttons">Change Password</button>
+					</div>
+		</div>
+	<p class="horiz-divider"></p>
+		<h3 class="obj-center">Company Information</h3>
+			<div class="settings row">
+					<div class="settings column">
+						<label>Company Address</label><input type="text">
+						<label>City</label><input type="text">
+						<label>State</label><input type="text">
+						<label>Zipcode</label><input type="number">
+					</div>
+					<div class="settings column">
+						<label>Office Phone</label><input type="tel">
+						<label>Office Email</label><input type="text">
+						<label>Owner Name</label><input type="tel">
+					</div>
+		</div>
+	<p class="horiz-divider"></p>
+		<h3 class="obj-center">App Customization Settings</h3>
+			<div class="settings row">
+					<div class="settings column">
+						<input type="checkbox"><label class="switch">Company Logo Shown</label>
+					</div>
+					<div class="settings column">
+						<input type="checkbox"><label class="switch">Company Colors in App</label>
+					</div>
+			</div><br>
+			<div class="settings row">
+					<div class="settings column">
+						<input type="checkbox"><label class="switch">Activity Notifications</label>
+					</div>
+					<div class="settings column">
+						<input type="checkbox"><label class="switch">Location Services</label>
+					</div>
+			</div><br>
+</div>
+
+</body>
+	<!-- Page ends here -->
+	
+<footer class="site-footer">
+	<p>Produced by Sentre Solutions</p>
+</footer>
+
+</html>

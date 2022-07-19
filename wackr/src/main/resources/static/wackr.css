@@ -5,7 +5,7 @@ body, html {
 	height: 100%;
 }
 
-/* Nav menu */
+/* --------------------Nav menu-------------------- */
 header,main,menu,nav {
     display: block
 }
@@ -14,7 +14,6 @@ ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
 	text-align: center;
 }
 
@@ -24,7 +23,7 @@ li {
 	display: inline-block;
 }
 
-/* Link decoration */
+/* --------------------Link decoration-------------------- */
 a {
 	text-decoration: none;
 	color: black;
@@ -41,8 +40,22 @@ li a:hover {
 	color: #598181;
 }
 
-/* Form input boxes */
-input[type=text], select, input[type=password] {
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* --------------------Form input boxes-------------------- */
+input[type=text], select {
   width: 30%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -53,6 +66,45 @@ input[type=text], select, input[type=password] {
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
+}
+
+.date {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.textarea {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  resize: vertical;
+}
+
+input[type=email] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  resize: vertical;
 }
 
 input[type=tel] {
@@ -68,9 +120,22 @@ input[type=tel] {
   margin-right: auto;
 }
 
+input[type=number] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 input[type=submit] {
   width: 30%;
-  background-color: #46788e;
+  background-color: #306bb5;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -82,10 +147,10 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #151d32;
+  background-color: #3456a7;
 }
 
-/* Logo and app name, header */
+/* --------------------Logo and app name, header-------------------- */
 .wackrheader {
 	width: 200px;
 	margin-left: auto;
@@ -93,15 +158,14 @@ input[type=submit]:hover {
 }
 
 .logo-header {
-	float:left;
-	border-right: 2px solid #46788e;
+	float: left;
 	padding-right: 2px;
 }
 
 .text-header {
 	text-align: center;
 	font-size: 20px;
-	color: #46788e;
+	color: #2da7c0;
 }
 
 .navigation {
@@ -109,21 +173,27 @@ input[type=submit]:hover {
 	font-size: large;
 }
 
-/* Offset page content to avoid overlap with footer */
+/* --------------------Offset page content to avoid overlap with footer-------------------- */
 .content {
 	padding-bottom: 80px;
 }
 
-/* For centering objects */
+/* --------------------For centering objects-------------------- */
 .obj-center {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-/* Buttons */
+.img-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* --------------------Buttons-------------------- */
 .button-style {
-	background-color: #598181;
+	background-color: #2fbeb6;
 	border: none;
 	color: white;
 	padding: 15px 32px;
@@ -131,11 +201,23 @@ input[type=submit]:hover {
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
+	border-radius: 4px;
 }
 
-/* Hero image with text */
+.button-style-sm {
+	background-color: #598181;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+}
+
+/* --------------------Hero image with text-------------------- */
 .hero-image {
-	background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url("assets/mountain3.jpg");
+	background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url("assets/mountain2.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover; 
@@ -153,7 +235,7 @@ input[type=submit]:hover {
 	font-size: 50px;
 }
 
-/* Content and columns on Home */
+/* --------------------Content and columns on Home-------------------- */
 .mid-content {
 	width: 50%;
     margin-left: auto;
@@ -161,12 +243,12 @@ input[type=submit]:hover {
 	margin-top: 30px;
 	margin-bottom: 100px;
 	padding: 5px;
-	border-left: 2px solid #46788e;
+	border-left: 2px solid #2fbeb6;
 }
 
 .read-more {
 	float: right;
-	background-color: #598181;
+	background-color: #2fbeb6;
 	border: none;
 	color: white;
 	padding: 15px 32px;
@@ -218,8 +300,8 @@ input[type=submit]:hover {
 	float: left;
 	width: 32%;
 	padding: 5px;
-	border-right: 2px solid #46788e;
-	border-left: 2px solid #46788e;
+	border-right: 2px solid #2fbeb6;
+	border-left: 2px solid #2fbeb6;
 	margin-bottom: 20px;
 }
 
@@ -229,23 +311,18 @@ input[type=submit]:hover {
 	display: table;
 }
 
-/* Sign In link */
+/* --------------------Sign In link-------------------- */
 .signin {
 	float: right;
 	display: inline-block;
 }
 
-/* Horizontal divider on Sign In */
+/* --------------------Horizontal divider on Sign In-------------------- */
 .signup-splash {
 	border-bottom: 2px solid #151d32;
 	width: 50%;
 	margin: auto;
 	margin-bottom: 25px;
-}
-
-/* Navigation links */
-.navigation li a {
-	color:black;
 }
 
 /* --------------------Dashboard-------------------- */
@@ -265,6 +342,14 @@ input[type=submit]:hover {
 	text-align: center;
 }
 
+.mid-cdash-column {
+	float: left;
+	width: 66%;
+	border-left: 2px solid #151d32;
+	padding: 2px;
+	text-align: center;
+}
+
 .horiz-divider {
 	border-bottom: 2px solid #151d32;
 	width: 80%;
@@ -273,7 +358,11 @@ input[type=submit]:hover {
 	margin-top: 25px;
 }
 
-/* Clear floats after the columns */
+
+.cdash-calendar {
+	float: right;
+}
+/* --------------------Clear floats after the columns-------------------- */
 .row:after {
 	content: "";
 	display: table;
@@ -286,13 +375,40 @@ input[type=submit]:hover {
 }
 
 .dash-buttons {
-	background-color: #598181;
+	background-color: #306bb5;
 	border: none;
+	border-radius: 8px;
 	color: white;
 	padding: 15px 32px;
 	text-align: center;
 	text-decoration: none;
 	font-size: 16px;
+}
+
+.cdash-buttons {
+	background-color: #306bb5;
+	border: none;
+	border-radius: 50%;
+	height: 75px;
+	width: 200px;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	margin-left: 5%;
+}
+
+.cdash-text {
+	display: inline-block;
+	margin-left: 10%
+}
+
+.cdash-right {
+	display: inline-block;
+	text-align: right;
+	margin-right: 10%;
+	border-left: 2px solid black;
 }
 
 .dashimg-order {
@@ -313,6 +429,144 @@ input[type=submit]:hover {
 	padding: 10px;
 	float: right;
 }
+
+.quote-head {
+	float: left;
+	width: 24%;
+	margin: auto;
+}
+
+/* --------------------Service Settings--------------------------- */
+
+.settings.table {
+	margin: auto;
+}
+
+.settings.row {
+  display: flex;
+}
+
+.settings.column {
+  flex: 50%;
+}
+
+.settings.buttons {
+	margin: auto;
+	background-color: #306bb5;
+	border: none;
+	border-radius: 8px;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+/* --------------------Toggle switch styling--------------------- */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+}
+
+/* -------------------Dropdown Menu Styling---------------------- */
+.dropbtn {
+  background-color: #ffffff;
+  color: black;
+  padding: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #598181; color: black;}
+
+/* Hide default HTML checkbox 
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+*/
+
+/* The slider - figure out a way to make it not absolute
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+*/
+
+/* Rounded sliders 
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+*/
+
+.switch.label {
+	
+}
+
 
 /* --------------------Footer for entire site-------------------- */
 .site-footer {
