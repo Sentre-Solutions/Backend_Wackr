@@ -342,31 +342,12 @@ input[type=submit]:hover {
 	text-align: center;
 }
 
-.mid-cdash-column {
-	float: left;
-	width: 66%;
-	border-left: 2px solid #151d32;
-	padding: 2px;
-	text-align: center;
-}
-
 .horiz-divider {
 	border-bottom: 2px solid #151d32;
 	width: 80%;
 	margin: auto;
 	margin-bottom: 25px;
 	margin-top: 25px;
-}
-
-
-.cdash-calendar {
-	float: right;
-}
-/* --------------------Clear floats after the columns-------------------- */
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
 }
 
 .dashbutton-order {
@@ -376,6 +357,7 @@ input[type=submit]:hover {
 
 .dash-buttons {
 	background-color: #306bb5;
+	margin: auto;
 	border: none;
 	border-radius: 8px;
 	color: white;
@@ -383,38 +365,6 @@ input[type=submit]:hover {
 	text-align: center;
 	text-decoration: none;
 	font-size: 16px;
-}
-
-.cdash-buttons {
-	background-color: #306bb5;
-	border: none;
-	border-radius: 50%;
-	height: 75px;
-	width: 200px;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	font-size: 16px;
-	margin-left: 5%;
-}
-
-.cdash-text {
-	display: inline-block;
-	margin-left: 10%
-}
-
-.cdash-right {
-	display: inline-block;
-	text-align: right;
-	margin-right: 10%;
-	border-left: 2px solid black;
-}
-
-.dashimg-order {
-	margin: auto;
-	float: left;
-	padding: 5px;
 }
 
 .dash-img1 {
@@ -428,6 +378,13 @@ input[type=submit]:hover {
 	width: 40%;
 	padding: 10px;
 	float: right;
+}
+
+/* --------------------Clear floats after the columns-------------------- */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .quote-head {
