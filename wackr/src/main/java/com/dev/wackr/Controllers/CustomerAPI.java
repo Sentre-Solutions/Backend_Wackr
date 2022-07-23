@@ -116,6 +116,18 @@ public class CustomerAPI {
    
     	return  Myresp;
     }
+    
+    @GetMapping("/get/{CustomerID}")
+    public @ResponseBody Customer findCustomerById(@PathVariable long CustomerID){
+
+        Optional<Customer> resp = customerRepo.findById(CustomerID);
+
+        if (!resp.isPresent()){
+            throw new SecurityException("User not found!");
+        }
+
+        return resp.get();
+    }
 	   
     
     

@@ -33,6 +33,12 @@ public class User {
     @Column(name = "ROLE", nullable = true)
     private String role;
     
+    @Column(name = "COMPANY")
+    private String company;
+    
+    @Column(name = "PHONE_NUMBER")
+    private String phoneNumber;
+    
     @Column(name = "PERMISSIONS", nullable = true)
     private int permissions;
   
@@ -131,6 +137,22 @@ public class User {
     	return Tasks;
     }
     
+    public String getPhoneNumber() {
+    	return phoneNumber;
+    }
+    
+    public void setPhoneNumber(String phoneNumber) {
+    	this.phoneNumber = phoneNumber;
+    }
+    
+    public String getCompanyName() {
+    	return company;
+    }
+    
+    public void setCompanyName(String company) {
+    	this.company = company;
+    }
+    
     public void UpdateUser(User UpdatedUser) {
     	
     	//Everything but password, UUID
@@ -159,6 +181,14 @@ public class User {
    	if(UpdatedUser.getCreatedOn() != null) {
    		
    		this.createdOn = UpdatedUser.getCreatedOn();
+   	}
+   	
+   	if(UpdatedUser.getPhoneNumber() != null) {
+   		this.phoneNumber = UpdatedUser.getPhoneNumber();
+   	}
+   	
+   	if(UpdatedUser.getCompanyName() != null) {
+   		this.company = UpdatedUser.getCompanyName();
    	}
    
     	
