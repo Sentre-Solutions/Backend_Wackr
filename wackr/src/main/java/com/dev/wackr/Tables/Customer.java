@@ -57,6 +57,12 @@ public class Customer {
     @Column(name = "NOTES")
     private String notes;
     
+    @Column(name = "PRIMARY_CONTACT")
+    private String primaryContact;
+    
+    @Column(name = "SECONDARY_CONTACT")
+    private String secondaryContact;
+    
     @JsonIgnore
     @Nullable
     @OneToMany
@@ -122,6 +128,22 @@ public class Customer {
 	
 	public void setTasks(Set<Task> Tasks) {
 		this.Tasks = Tasks;
+	}
+	
+	public String getPrimaryContact() {
+		return primaryContact;
+	}
+	
+	public void setPrimaryContact(String primaryContact) {
+		this.primaryContact = primaryContact;
+	}
+	
+	public String getSecondaryContact() {
+		return secondaryContact;
+	}
+	
+	public void setSecondaryContact(String secondaryContact) {
+		this.secondaryContact = secondaryContact;
 	}
 	
 	 public void UpdateCustomer(Customer UpdatedCustomer) {
